@@ -1,6 +1,6 @@
 # [**Voodoo**](https://voodoo-test-voodoo.netlify.app) - landing page with fully responsive to users on various devices.
 
-![Voodoo](https://raw.githubusercontent.com/Basiuk-Ivan/Voodoo-Test/main/src/img/screen.png)
+![Voodoo](https://raw.githubusercontent.com/Basiuk-Ivan/Voodoo-Test/main/build/img/screen.png)
 
 Voodoo is a dynamic landing page created using tailwindcss, fully tailored to various devices.
 
