@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VooDoo</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Space+Grotesk:300,regular,500,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Space+Mono:regular,italic,700,700italic"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="h-full bg-body">
+    <div class="min-h-full overflow-hidden">
+      <div
+        class="border-t border-black absolute top-48 max-md:top-32 max-sm:top-24 w-full"
+      ></div>
+      <div
+        class="container mx-auto mt-12 pl-14 pr-1 relative max-md:pl-10 max-md:mt-9 max-sm:pl-8 max-sm:mt-6"
+      >
+        <div
+          class="w-11 h-11 mr-2 absolute left-1 max-md:w-[33px] max-md:h-[33px] max-sm:w-[23px] max-sm:h-[23px]"
+        >
+          <a href="">
+            <img
+              class="w-full h-full"
+              src="./img/Logomark.png"
+              alt="Logomark"
+            />
+          </a>
+        </div>
+
+        <!-- HEADER -->
+        <header class="flex justify-between items-center relative">
+          <div
+            class="flex relative w-48 h-24 max-md:w-[140px] max-md:h-[70px] max-sm:w-[109px] max-sm:h-[50px]"
+          >
+            <img
+              class="w-full h-full"
+              src="./img/VooDoo Test.png"
+              alt="VooDoo"
+            />
+          </div>
+          <div
+            class="flex justify-between items-center gap-x-12 cursor-pointer max-md:gap-x-8 max-sm:gap-x-4"
+          >
+            <div class="flex w-6 h-6" id="open-cart">
+              <img
+                class="w-full h-full"
+                src="./img/shopping-cart.png"
+                alt="Shopping-cart"
+              />
+              <div id="amount-cart"></div>
+            </div>
+            <div>
+              <button
+                type="button"
+                class="text-xl font-bold px-3 py-1.5 bg-button text-white rounded max-md:text-lg max-sm:text-sm"
+              >
+                Sign-Up
+              </button>
+            </div>
+          </div>
+        </header>
+      </div>
+
+      <!-- HIDDEN CART -->
+      <div
+        class="absolute overflow-auto h-screen top-0 right-0 w-[445px] max-md:w-[345px] max-sm:w-full bg-cart pt-12 px-9 text-alpha hidden"
+        id="cart-menu"
+      >
+        <div class="flex justify-between items-center border-b pb-5">
+          <div class="text-2xl font-bold">Shopping Cart</div>
+          <div class="cursor-pointer">
+            <img id="close-cart" src="./img/close-line.png" alt="close-icon" />
+          </div>
+        </div>
+        <div class="flex">
+          <div
+            id="cart-item-content"
+            class="flex flex-col gap-y-10 mt-[53px] w-full"
+          ></div>
+        </div>
+        <div class="border-t mt-8 pt-[35px] flex justify-between">
+          <div class="text-alpha font-bold text-sm">TOTAL</div>
+          <div id="total-price"></div>
+        </div>
+      </div>
+
+      <!-- MAIN -->
+      <main id="main" class="container mx-auto mt-[148px] p-1">
+        <div class="flex justify-between items-center p-6 bg-black rounded">
+          <div class="flex gap-x-12 max-sm:gap-x-6">
+            <div class="flex gap-x-[6px] justify-center items-center">
+              <img src="./img/alert-circle.png" alt="alert-circle" />
+              <div class="text-alpha text-base font-bold">ALPHA</div>
+            </div>
+            <div
+              class="text-alpha font-medium text-sm max-sm:w-[100px] whitespace-nowrap overflow-hidden"
+            >
+              Important info regarding our service
+            </div>
+          </div>
+          <div class="cursor-pointer">
+            <img src="./img/chevron-down.png" alt="chevron-down" />
+          </div>
+        </div>
+
+        <!-- LOADER -->
+        <div id="loader" class="hidden">
+          <div class="animate-pulse flex space-x-4">
+            <div class="flex flex-wrap justify-center mt-12 gap-x-6 gap-y-12">
+              <div class="border-2 bg-stone-400 w-[300px] h-[300px]"></div>
+              <div class="border-2 bg-stone-400 w-[300px] h-[300px]"></div>
+              <div class="border-2 bg-stone-400 w-[300px] h-[300px]"></div>
+              <div class="border-2 bg-stone-400 w-[300px] h-[300px]"></div>
+              <div class="border-2 bg-stone-400 w-[300px] h-[300px]"></div>
+              <div class="border-2 bg-stone-400 w-[300px] h-[300px]"></div>
+              <div class="border-2 bg-stone-400 w-[300px] h-[300px]"></div>
+              <div class="border-2 bg-stone-400 w-[300px] h-[300px]"></div>
+              <div class="border-2 bg-stone-400 w-[300px] h-[300px]"></div>
+              <div class="border-2 bg-stone-400 w-[300px] h-[300px]"></div>
+              <div class="border-2 bg-stone-400 w-[300px] h-[300px]"></div>
+              <div class="border-2 bg-stone-400 w-[300px] h-[300px]"></div>
+              <div class="border-2 bg-stone-400 w-[300px] h-[300px]"></div>
+              <div class="border-2 bg-stone-400 w-[300px] h-[300px]"></div>
+              <div class="border-2 bg-stone-400 w-[300px] h-[300px]"></div>
+              <div class="border-2 bg-stone-400 w-[300px] h-[300px]"></div>
+            </div>
+          </div>
+        </div>
+        <ul
+          id="products-container"
+          class="flex flex-wrap justify-center mt-12 gap-x-6 gap-y-12"
+        ></ul>
+        <div
+          id="pagination"
+          class="pt-[70px] pb-[196px] flex justify-center gap-2.5 items-center text-lg font-light text-pagination"
+        ></div>
+      </main>
+
+      <!-- FOOTER -->
+      <footer id="footer" class="bg-white py-[84px] max-lg:p-16 max-sm:p-12">
+        <div class="container mx-auto">
+          <div
+            class="flex justify-between max-sm:justify-center gap-y-12 max-lg:flex-col max-lg:justify-center max-lg:items-center"
+          >
+            <div
+              class="w-[300px] max-sm:w-full flex justify-center items-center max-lg:order-last max-sm:order-last"
+            >
+              <div class="w-[82px] h-[82px]">
+                <a href="">
+                  <img
+                    class="w-full h-full"
+                    src="./img/Logomark-footer.png"
+                    alt="Logomark-footer"
+                  />
+                </a>
+              </div>
+            </div>
+            <ul
+              class="font-mono w-[300px] max-sm:w-full flex flex-col text-black text-sm font-bold gap-y-1.5 uppercase"
+            >
+              <li>
+                <a class="" href="">FAQ</a>
+              </li>
+              <li>
+                <a href="">RETURNS</a>
+              </li>
+              <li>
+                <a href="">CONTACT</a>
+              </li>
+            </ul>
+            <ul
+              class="font-mono w-[300px] max-sm:w-full flex flex-col text-black text-sm font-bold gap-y-1.5 uppercase"
+            >
+              <li>
+                <a href="">TERMS & CONDITIONS</a>
+              </li>
+              <li>
+                <a href="">PRIVACY POLICY</a>
+              </li>
+              <li>
+                <a href="">COOKIE POLICY</a>
+              </li>
+              <li>
+                <a href="">COOKIE SETTINGS</a>
+              </li>
+            </ul>
+            <ul
+              class="font-mono w-[300px] max-sm:w-full flex flex-col text-black text-sm font-bold gap-y-1.5 uppercase"
+            >
+              <li>
+                <a href="">ABOUT SECOND CHANCE</a>
+              </li>
+              <li>
+                <a href="">CAREER</a>
+              </li>
+              <li>
+                <a href="">FACEBOOK</a>
+              </li>
+              <li>
+                <a href="">INSTAGRAM</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
